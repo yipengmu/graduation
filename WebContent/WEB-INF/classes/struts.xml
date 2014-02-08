@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 改变url现实的后缀,默认是action -->
+    <constant name="struts.action.extension" value="xhtml" />
+    
+	<package name="struts2login" extends="struts-default">
+	    <!-- 这里的Class是由Spring里面制定的ID,如果单独用struts2,则这里是包名+类名 -->
+		<action name="UserLogin" class="com.greatwqs.action.PersonAction">
+			<result name="success" >/login_s.jsp</result>
+			<result name="input">/login.jsp</result>
+		</action>		
+	</package>
+</struts>
